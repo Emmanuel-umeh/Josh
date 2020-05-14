@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import {withRouter} from 'react-router-dom'
+import {Link,withRouter} from 'react-router-dom'
 
 class Header extends React.Component{
 
@@ -48,13 +48,13 @@ class Header extends React.Component{
     <div className="container">
       {/* menu */}
       <ul className="main-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Jewelry
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/about">About</Link></li>
+        {/* <li><a href="#">Jewelry
             <span className="new">New</span>
-          </a></li>
-        <li><a href="#">Shoes</a>
+          </a></li> */}
+        {/* <li><a href="#">Shoes</a>
           <ul className="sub-menu">
             <li><a href="#">Sneakers</a></li>
             <li><a href="#">Sandals</a></li>
@@ -62,8 +62,8 @@ class Header extends React.Component{
             <li><a href="#">Boots</a></li>
             <li><a href="#">Flip Flops</a></li>
           </ul>
-        </li>
-        <li><a href="#">Pages</a>
+        </li> */}
+        {/* <li><a href="#">Pages</a>
           <ul className="sub-menu">
             <li><a href="./product.html">Product Page</a></li>
             <li><a href="./category.html">Category Page</a></li>
@@ -71,7 +71,7 @@ class Header extends React.Component{
             <li><a href="./checkout.html">Checkout Page</a></li>
             <li><a href="./contact.html">Contact Page</a></li>
           </ul>
-        </li>
+        </li> */}
         <li><a href="#">Blog</a></li>
       </ul>
     </div>
