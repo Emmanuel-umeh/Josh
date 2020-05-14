@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
-
+import "./products.css"
 class Latest extends React.Component{
 
 
@@ -13,74 +13,111 @@ class Latest extends React.Component{
     <div className="section-title">
       <h2>LATEST PRODUCTS</h2>
     </div>
-    <div className="product-slider owl-carousel">
-      <div className="product-item">
-        <div className="pi-pic">
-          <img src="./img/product/1.jpg" alt="" />
-          <div className="pi-links">
-            <a href="#" className="add-card"><i className="flaticon-bag" /><span>ADD TO CART</span></a>
-            <a href="#" className="wishlist-btn"><i className="flaticon-heart" /></a>
+    <div class="container">
+  <div class="row">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-none d-lg-block">
+            <div class="slide-box">
+              <img src="https://picsum.photos/285/200/?image=0&random" alt="First slide"  />
+              <img src="https://picsum.photos/285/200/?image=1&random" alt="First slide"  />
+              <img src="https://picsum.photos/285/200/?image=2&random" alt="First slide"  />
+              <img src="https://picsum.photos/285/200/?image=3&random" alt="First slide"  />
+            </div>
+          </div>
+          <div class="d-none d-md-block d-lg-none">
+            <div class="slide-box">
+              <img src="https://picsum.photos/240/200/?image=0&random" alt="First slide"  />
+              <img src="https://picsum.photos/240/200/?image=1&random" alt="First slide"  />
+              <img src="https://picsum.photos/240/200/?image=2&random" alt="First slide"  />
+            </div>
+          </div>
+          <div class="d-none d-sm-block d-md-none">
+            <div class="slide-box">
+              <img 
+                src="https://picsum.photos/270/200/?image=0&random" alt="First slide"  />
+              <img src="https://picsum.photos/270/200/?image=1&random" alt="First slide"  />
+            </div>
+          </div>
+          <div class="d-block d-sm-none">
+            <img 
+              class="d-block w-100" 
+              src="https://picsum.photos/600/400/?image=0&random" 
+              alt="First slide"
+              />
           </div>
         </div>
-        <div className="pi-text">
-          <h6>$35,00</h6>
-          <p>Flamboyant Pink Top </p>
-        </div>
-      </div>
-      <div className="product-item">
-        <div className="pi-pic">
-          <div className="tag-new">New</div>
-          <img src="./img/product/2.jpg" alt="" />
-          <div className="pi-links">
-            <a href="#" className="add-card"><i className="flaticon-bag" /><span>ADD TO CART</span></a>
-            <a href="#" className="wishlist-btn"><i className="flaticon-heart" /></a>
+        <div class="carousel-item">
+          <div class="d-none d-lg-block">
+            <div class="slide-box">
+              <img 
+                src="https://picsum.photos/285/200/?image=4&random" 
+                alt="Second slide"
+                />
+              <img 
+              src="https://picsum.photos/285/200/?image=5&random" 
+              alt="Second slide"
+              />
+              <img 
+              src="https://picsum.photos/285/200/?image=6&random" 
+              alt="Second slide"
+              />
+              <img 
+              src="https://picsum.photos/285/200/?image=7&random" 
+              alt="Second slide"
+              />
+            </div>
+          </div>
+          <div class="d-none d-md-block d-lg-none">
+            <div class="slide-box">
+              <img 
+                src="https://picsum.photos/240/200/?image=3&random" 
+                alt="Second slide"
+                />
+              <img 
+                src="https://picsum.photos/240/200/?image=4&random" 
+                alt="Second slide"
+                />
+              <img 
+                src="https://picsum.photos/240/200/?image=5&random" 
+                alt="Second slide"
+                />
+            </div>
+          </div>
+          <div class="d-none d-sm-block d-md-none">
+            <div class="slide-box">
+              <img 
+                src="https://picsum.photos/270/200/?image=2&random" 
+                alt="Second slide"
+                />
+              <img 
+                src="https://picsum.photos/270/200/?image=3&random" 
+                alt="Second slide"
+                />
+            </div>
+          </div>
+          <div class="d-block d-sm-none">
+            <img class="d-block w-100" 
+            src="https://picsum.photos/600/400/?image=1&random" alt="Second slide" />
           </div>
         </div>
-        <div className="pi-text">
-          <h6>$35,00</h6>
-          <p>Black and White Stripes Dress</p>
-        </div>
       </div>
-      <div className="product-item">
-        <div className="pi-pic">
-          <img src="./img/product/3.jpg" alt="" />
-          <div className="pi-links">
-            <a href="#" className="add-card"><i className="flaticon-bag" /><span>ADD TO CART</span></a>
-            <a href="#" className="wishlist-btn"><i className="flaticon-heart" /></a>
-          </div>
-        </div>
-        <div className="pi-text">
-          <h6>$35,00</h6>
-          <p>Flamboyant Pink Top </p>
-        </div>
-      </div>
-      <div className="product-item">
-        <div className="pi-pic">
-          <img src="./img/product/4.jpg" alt="" />
-          <div className="pi-links">
-            <a href="#" className="add-card"><i className="flaticon-bag" /><span>ADD TO CART</span></a>
-            <a href="#" className="wishlist-btn"><i className="flaticon-heart" /></a>
-          </div>
-        </div>
-        <div className="pi-text">
-          <h6>$35,00</h6>
-          <p>Flamboyant Pink Top </p>
-        </div>
-      </div>
-      <div className="product-item">
-        <div className="pi-pic">
-          <img src="./img/product/6.jpg" alt="" />
-          <div className="pi-links">
-            <a href="#" className="add-card"><i className="flaticon-bag" /><span>ADD TO CART</span></a>
-            <a href="#" className="wishlist-btn"><i className="flaticon-heart" /></a>
-          </div>
-        </div>
-        <div className="pi-text">
-          <h6>$35,00</h6>
-          <p>Flamboyant Pink Top </p>
-        </div>
-      </div>
+      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
+  </div>
+</div>
   </div>
 </section>
 {/* letest product section end */}
