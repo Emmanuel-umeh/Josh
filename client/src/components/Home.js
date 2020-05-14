@@ -16,7 +16,6 @@ class HomePage extends Component{
 
             <React.Fragment>
 
-              <body>
                 <Header />
 
                 <Slider />
@@ -25,7 +24,6 @@ class HomePage extends Component{
                 <Trending />
                 <Banner />
                 <Footer />
-                </body>
             </React.Fragment>
         )
     }
