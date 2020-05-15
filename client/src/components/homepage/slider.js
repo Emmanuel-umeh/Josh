@@ -20,7 +20,7 @@ class Slider extends React.Component{
       <img class="d-block w-100" src="/img/bg.jpg" alt="First slide" />
       <div class="carousel-caption d-none d-md-block">
       <section class="animation-box">
-    <div class="first-text">Welcome to Ayewah Store</div>
+    <div class="first-text"> <h2 style = {{fontSize : "60px" , color : "white"}}>Welcome to Ayewah Store</h2></div>
     {/* <div class="second-text">This is another example text</div>
     <div class="third-text">This is an example of vertical text</div>
     <div class="fourth-text">I will not move, just fade</div>
@@ -32,17 +32,17 @@ class Slider extends React.Component{
     <div class="carousel-item">
       <img class="d-block w-100" src="/img/bg-2.jpg" alt="Second slide" />
       <div class="carousel-caption d-none d-md-block">
-    <h5>Something</h5>
-    <p>Somethin</p>
+    <h2 style = {{fontSize : "40" , color : "white"}}>Get Your Quality UnderWear here</h2 >
+    <p>Best Online Shopping Platform</p>
   </div>
     </div>
-    <div class="carousel-item">
+    {/* <div class="carousel-item">
       <img class="d-block w-100" src="/img/bg.jpg" alt="Third slide" />
       <div class="carousel-caption d-none d-md-block">
     <h5>Something</h5>
     <p>Somethin</p>
   </div>
-    </div>
+    </div> */}
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -11,7 +11,7 @@ class Footer extends React.Component{
 <section className="footer-section">
   <div className="container">
     <div className="footer-logo text-center">
-      <a href="index.html"><img src="./img/logo-light.png" alt="" /></a>
+      <a href="index.html"><img src="https://logos.flamingtext.com/Name-Logos/Josh-design-china-name.png" alt="" /></a>
     </div>
     <div className="row">
       <div className="col-lg-3 col-sm-6">

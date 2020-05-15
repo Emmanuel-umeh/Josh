@@ -23,12 +23,12 @@ if(JSON.parse(localStorage.getItem('cart'))){
         <div className="col-lg-2 text-center text-lg-left">
           {/* logo */}
           <a href="./index.html" className="site-logo">
-            <img src="img/logo.png" alt="" />
+            <img src="https://logos.flamingtext.com/Name-Logos/Josh-design-china-name.png " alt="" />
           </a>
         </div>
         <div className="col-xl-6 col-lg-5">
           <form className="header-search-form">
-            <input type="text" placeholder="Search on divisima ...." />
+            <input type="text" placeholder="Search on Josh Ayewah store...." />
             <button><i className="flaticon-search" /></button>
           </form>
         </div>

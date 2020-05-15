@@ -24,10 +24,28 @@ closeModal() {
     });
 }
 
+state = {
+  data : null
+}
+
+
+componentDidMount(){
+  var existing = localStorage.getItem('cartId');
+
+// If no existing data, create an array
+// Otherwise, convert the localStorage string to an array
+existing = existing ? existing.split(',') : [];
+
+this.setState({
+  data : existing
+}, console.log(this.state.data))
+}
+
     render(){
 
       const {items} = this.props.items
-      console.log("items ", items)
+      // console.log("items ", items)
+      console.log("dataa ", this.state.data)
 
 
 
@@ -58,8 +76,13 @@ return(
       <div className="pi-pic">
         <img src={item.imageUrl} alt="" />
         <div className="pi-links">
+
+          {this.state.data && !this.state.data.includes(item._id) ? 
           <a href={null} className="add-card"><i className="flaticon-bag" /><span onClick = {
             ()=>{
+
+
+              // append the full data to local storage
               console.log("key" , key)
               console.log("item" , items[key])
               // const data = JSON.stringify(items[key])
@@ -77,9 +100,40 @@ return(
                 this.openModal()
               }  
 
+
+              // append id of the data to local storage array
+
+              // Get the existing data
+var existing = localStorage.getItem('cartId');
+
+// If no existing data, create an array
+// Otherwise, convert the localStorage string to an array
+existing = existing ? existing.split(',') : [];
+
+// Add new data to localStorage Array
+existing.push(`${items[key]._id}`);
+
+// Save back to localStorage
+localStorage.setItem('cartId', existing.toString());
+
             
             }
           } >ADD TO CART</span></a>
+          
+          
+          : 
+
+          <a href={null} className="add-card"><i className="flaticon-bag" /><span onClick = {
+            ()=>{
+
+alert("Already in cart")
+           
+            }
+          } >ADDED TO CART</span></a>
+          
+        }
+         
+         
           <a href={null}  className="wishlist-btn"><i className="flaticon-heart" onClick = {
             ()=>{
               console.log("key" , key)
