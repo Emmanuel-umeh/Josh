@@ -7,6 +7,18 @@ import {Link} from 'react-router-dom'
 import Header from '../homepage/header'
 
 import Lottie from "react-lottie"
+
+import * as found from '../LottieFiles/notFound.json'
+
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: found.default,
+  rendererSettings: {
+  preserveAspectRatio: "xMidYMid slice"
+  }
+  }
 class Cart extends React.Component{
 
 
@@ -129,8 +141,13 @@ const items = JSON.parse(localStorage.getItem("cart"))
         <div className="col-lg-8">
           <div className="cart-table">
             <h3>Your Cart</h3>
+
+            {this.state.data ? 
+
+            <React.Fragment>
             <div className="cart-table-warp">
               <table>
+
                 <thead>
                   <tr>
                     <th className="product-th">Product</th>
@@ -141,7 +158,7 @@ const items = JSON.parse(localStorage.getItem("cart"))
                 </thead>
                 <tbody>
 
-                  {this.state.data ?  this.state.data.map((item, key) => (
+                 {this.state.data.map((item, key) => (
 
                     
   <tr key = {key}>
@@ -165,7 +182,7 @@ const items = JSON.parse(localStorage.getItem("cart"))
   {/* {this.setState({total : this.state.total + item.price })} */}
   <td className="total-col"><h4>₦{item.price }</h4></td>
 </tr>
-                  ) ) : null}
+                  ) )}
                 
                 
                 </tbody>
@@ -174,6 +191,16 @@ const items = JSON.parse(localStorage.getItem("cart"))
             <div className="total-cost">
               <h6>Total <span>{this.state.total} </span></h6>
             </div>
+            </React.Fragment>
+          : <center>
+
+         
+          <h2>Cart Is Empty</h2> 
+          <Lottie options = {defaultOptions} />
+
+          <h2>Click <Link to="/">Here</Link> to continue Shopping</h2> 
+          
+         </center>}
           </div>
         </div>
         <div className="col-lg-4 card-right">

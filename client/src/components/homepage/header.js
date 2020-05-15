@@ -6,6 +6,12 @@ class Header extends React.Component{
 
 
     render(){
+// get number of items in cart
+var numberInCart = 0
+if(JSON.parse(localStorage.getItem('cart'))){
+   numberInCart  =  JSON.parse(localStorage.getItem('cart')).length
+}
+ 
 
         return(
 <React.Fragment>
@@ -35,7 +41,7 @@ class Header extends React.Component{
             <div className="up-item">
               <div className="shopping-card">
                 <i className="flaticon-bag" />
-                <span>0</span>
+                <span>{numberInCart}</span>
               </div>
               <Link to="/cart">Shopping Cart</Link>
             </div>
