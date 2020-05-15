@@ -11,7 +11,7 @@ class Slider extends React.Component{
             <React.Fragment>
 
       {/* <!-- Hero section --> */}
-      <section class="hero-section" style ={{marginTop : "-18px"}}>
+      <section class="hero-section" id = "carousel" style ={{marginTop : "-18px"}}>
         <div class="hero-slider">
       
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

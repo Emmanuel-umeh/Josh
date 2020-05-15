@@ -171,6 +171,7 @@ alert("Already in cart")
 <br></br>
                         <a href="#" class="btn11" onClick = {()=>{
                           this.closeModal()
+                          window.location.reload()
                           // this.props.history.push("/cart")
                         }} >
      <span>Continue Shopping</span>

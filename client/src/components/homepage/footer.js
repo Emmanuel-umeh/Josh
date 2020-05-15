@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {withRouter} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 class Footer extends React.Component{
 
     render(){
@@ -11,7 +11,7 @@ class Footer extends React.Component{
 <section className="footer-section">
   <div className="container">
     <div className="footer-logo text-center">
-      <a href="index.html"><img src="https://logos.flamingtext.com/Name-Logos/Josh-design-china-name.png" alt="" /></a>
+      <a href="index.html"><img src="https://logos.flamingtext.com/Name-Logos/Josh-design-china-name.png" alt=""  height = "100px" width = "100px" /></a>
     </div>
     <div className="row">
       <div className="col-lg-3 col-sm-6">
@@ -25,19 +25,19 @@ class Footer extends React.Component{
         <div className="footer-widget about-widget">
           <h2>Questions</h2>
           <ul>
-            <li><a href style={{color : "gray"}}>About Us</a></li>
-            <li><a href style={{color : "gray"}}>Track Orders</a></li>
-            <li><a href style={{color : "gray"}}>Returns</a></li>
-            <li><a href style={{color : "gray"}}>Jobs</a></li>
-            <li><a href style={{color : "gray"}}>Shipping</a></li>
-            <li><a href style={{color : "gray"}}>Blog</a></li>
+            <li><Link to = "/" style={{color : "gray"}}>About Us</Link></li>
+            <li><Link to = "/" style={{color : "gray"}}>Track Orders</Link></li>
+            <li><Link to = "/" style={{color : "gray"}}>Returns</Link></li>
+            <li><Link to = "/" style={{color : "gray"}}>Jobs</Link></li>
+            <li><Link to = "/" style={{color : "gray"}}>Shipping</Link></li>
+            <li><Link to = "/" style={{color : "gray"}}>Blog</Link></li>
           </ul>
           <ul>
-            <li><a href style={{color : "gray"}}>Partners</a></li>
-            <li><a href style={{color : "gray"}}> Bloggers</a></li>
-            <li><a href style={{color : "gray"}}>Support</a></li>
-            <li><a href style={{color : "gray"}}>Terms of Use</a></li>
-            <li><a href style={{color : "gray"}}>Press</a></li>
+            <li><Link to = "/" style={{color : "gray"}}>Partners</Link></li>
+            <li><Link to = "/" style={{color : "gray"}}> Bloggers</Link></li>
+            <li><Link to = "/" style={{color : "gray"}}>Support</Link></li>
+            <li><Link to = "/" style={{color : "gray"}}>Terms of Use</Link></li>
+            <li><Link to = "/" style={{color : "gray"}}>Press</Link></li>
           </ul>
         </div>
       </div>

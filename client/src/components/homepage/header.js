@@ -23,7 +23,7 @@ if(JSON.parse(localStorage.getItem('cart'))){
         <div className="col-lg-2 text-center text-lg-left">
           {/* logo */}
           <a href="./index.html" className="site-logo">
-            <img src="https://logos.flamingtext.com/Name-Logos/Josh-design-china-name.png " alt="" />
+            <img src="https://logos.flamingtext.com/Name-Logos/Josh-design-china-name.png " alt="" height = "100px" width = "100px" />
           </a>
         </div>
         <div className="col-xl-6 col-lg-5">
