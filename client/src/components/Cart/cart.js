@@ -5,6 +5,8 @@ import './button.css'
 import {Link} from 'react-router-dom'
 
 import Header from '../homepage/header'
+
+import Lottie from "react-lottie"
 class Cart extends React.Component{
 
 
@@ -37,9 +39,12 @@ class Cart extends React.Component{
 }
 
 // console.log(data.sum("price"))
-this.setState({
-  total : data.sum("price")
-})
+if(data !== null){
+  this.setState({
+    total : data.sum("price")
+  })
+}
+
 
 
   }
@@ -136,7 +141,7 @@ const items = JSON.parse(localStorage.getItem("cart"))
                 </thead>
                 <tbody>
 
-                  {this.state.data.map((item, key) => (
+                  {this.state.data ?  this.state.data.map((item, key) => (
 
                     
   <tr key = {key}>
@@ -160,7 +165,7 @@ const items = JSON.parse(localStorage.getItem("cart"))
   {/* {this.setState({total : this.state.total + item.price })} */}
   <td className="total-col"><h4>₦{item.price }</h4></td>
 </tr>
-                  ))}
+                  ) ) : null}
                 
                 
                 </tbody>

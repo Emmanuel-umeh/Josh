@@ -81,7 +81,7 @@ app.use('/api/items', item);
 
 // mongoose uri
 
-const db =  "mongodb+srv://joshayewah:Loaded888@josh-mly6u.mongodb.net/test?retryWrites=true&w=majority";
+const db =  "mongodb://joshayewah:Loaded888@josh-shard-00-00-mly6u.mongodb.net:27017,josh-shard-00-01-mly6u.mongodb.net:27017,josh-shard-00-02-mly6u.mongodb.net:27017/test?ssl=true&replicaSet=Josh-shard-0&authSource=admin&retryWrites=true&w=majority";
 
 // Connect to mongoose
 console.log(db)
