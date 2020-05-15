@@ -30,7 +30,7 @@ class Latest extends React.Component{
               <img src="https://images-na.ssl-images-amazon.com/images/I/81jqJZ0aUzL._AC_UL1500_.jpg" alt="First slide"  />
               <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F12%2F2018%2F11%2Fnewbalance-performance-panty.jpg&q=85" alt="First slide"  />
             </div>
-          </div>
+          </div>F
           {/* <div class="d-none d-md-block d-lg-none">
             <div class="slide-box">
               <img src="https://picsum.photos/240/200/?image=0&random" alt="First slide"  />

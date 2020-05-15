@@ -74,7 +74,7 @@ return(
     <div className="col-lg-3 col-sm-6" key={key}>
     <div className="product-item">
       <div className="pi-pic">
-        <img src={item.imageUrl} alt="" />
+        <img src={item.imageUrl} alt=""onClick = {()=>this.props.history.push(`/single/?id=${item._id}`)} />
         <div className="pi-links">
 
           {this.state.data && !this.state.data.includes(item._id) ? 
@@ -144,7 +144,7 @@ alert("Already in cart")
       </div>
       <div className="pi-text">
         <h6>₦{item.price}</h6>
-        <p  style ={{fontSize: "20px",
+        <p  onClick ={()=>this.props.history.push(`/single/?id=${item._id}`)} style ={{fontSize: "20px",
 	fontWeight: "700"}}>{item.name} </p>
       </div>
     </div>

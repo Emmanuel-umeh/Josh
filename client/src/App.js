@@ -24,6 +24,7 @@ import Login from './components/Authentication/Login';
 import store from './store'
 import SignUp from './components/Authentication/SignUp';
 import Cart from './components/Cart/cart';
+import SinglePage from './components/SinglePage/singlePage';
 class App extends React.Component {
 
 
@@ -89,6 +90,11 @@ class App extends React.Component {
        <Contact /> 
      </Route>
 
+
+     <Route  path="/single" >
+        
+        <SinglePage /> 
+      </Route>
      <Route  path="/cart" >
           
      <Cart />

@@ -62,5 +62,26 @@ router.get('/', (req,res) =>{
     });
   })
 
+
+  //   single items
+router.get('/single/:id', (req,res) =>{
+
+  const id = req.params.id
+  Item.findById(id)
+  .then(item => {
+
+    if(!item) {
+      return res.json("item does not exist")
+    }
+    // console.log(items)
+    res.status(200).json(item)
+  }
+
+   ) .catch(e => {
+    // res.redirect("/");
+    console.log(e);
+  });
+})
+
   module.exports = router
   

@@ -1,10 +1,12 @@
 import {
 ITEMS_LOADED,
-ITEMS_LOADING
+ITEMS_LOADING,
+SINGLE_ITEM_LOADED
 } from "../actions/types";
 
 const initialState = {
   items: [],
+  singleItem : [],
 
   loading: false,
   type : null
@@ -26,6 +28,12 @@ export default function(state = initialState, action) {
        type : ITEMS_LOADED
       };
    
+      case SINGLE_ITEM_LOADED:
+        return {
+          ...state,
+          singleItem : action.payload,
+         type : SINGLE_ITEM_LOADED
+        };
    
 
           
