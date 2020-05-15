@@ -10,6 +10,8 @@ var logger = require('morgan');
 // var indexRouter = require('./routes/api/index');
 var signUp = require('./routes/api/signup');
 var login = require('./routes/api/login');
+
+var item = require("./routes/api/item")
 // var user = require('./routes/api/users')
 // var campaign = require('./routes/api/campaign')
 // var admin = require('./routes/api/admin')
@@ -73,7 +75,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use('/', indexRouter);
 app.use('/api/signup', signUp);
 app.use('/api/login', login);
-// app.use('/api/users', user);
+app.use('/api/items', item);
 // app.use('/api/campaign', campaign)
 // app.use("/api/admin", admin)
 

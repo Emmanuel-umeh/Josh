@@ -37,7 +37,7 @@ class Header extends React.Component{
                 <i className="flaticon-bag" />
                 <span>0</span>
               </div>
-              <a href="#">Shopping Cart</a>
+              <Link to="/cart">Shopping Cart</Link>
             </div>
           </div>
         </div>

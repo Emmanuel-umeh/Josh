@@ -20,13 +20,16 @@ const TransactionSchema = new Schema({
       required: true,
     },
     price: {
-      type: String,
+      type: Number,
     },
  
 
-    product: {
-      type: String,
-      lowercase: true
+    productID: {
+      type: String
+    
+    },
+    productName: {
+      type: String
     
     },
 

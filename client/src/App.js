@@ -8,6 +8,7 @@ import About from "./components/homepage/about"
 import {connect} from 'react-redux'
 import {clearErrors} from './actions/errorActions'
 import { loadUser, logout } from "./actions/authActions";
+import {getItems} from "./actions/itemActions"
 import {
   Route,
   NavLink,
@@ -22,6 +23,7 @@ import Login from './components/Authentication/Login';
 
 import store from './store'
 import SignUp from './components/Authentication/SignUp';
+import Cart from './components/Cart/cart';
 class App extends React.Component {
 
 
@@ -30,7 +32,9 @@ class App extends React.Component {
     // this.setState({
     //   loader : true
     // })
+    store.dispatch(getItems());
     store.dispatch(loadUser());
+ 
   
   //   Pusher.logToConsole = true;
   
@@ -81,10 +85,17 @@ class App extends React.Component {
   
   
        <Route  path="/contact" >
-         
-         <Contact />
+        
+       <Contact /> 
+     </Route>
+
+     <Route  path="/cart" >
+          
+     <Cart />
+      
            
      </Route>
+
 
      <Route  path="/login" >
          
@@ -132,7 +143,8 @@ class App extends React.Component {
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  error: state.error
+  error: state.error,
+  items : state.items
 });
 export default connect(mapStateToProps, {clearErrors, logout})(
   App

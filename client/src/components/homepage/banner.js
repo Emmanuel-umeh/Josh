@@ -12,10 +12,10 @@ class Banner extends React.Component{
             <React.Fragment>
     <section className="banner-section">
   <div className="container">
-    <div className="banner set-bg" data-setbg="/img/banner-bg.jpg">
+    <div className="banner set-bg" data-setbg="https://www.seattlespermbank.com/wp-content/uploads/2018/09/underwear-affects-sperm-production.jpg">
       <div className="tag-new">NEW</div>
       <span>New Arrivals</span>
-      <h2>STRIPED SHIRTS</h2>
+      <h2>STRIPED UNDERWEAR</h2>
       <a href="#" className="site-btn">SHOP NOW</a>
     </div>
   </div>

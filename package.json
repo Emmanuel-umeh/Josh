@@ -36,6 +36,7 @@
     "passport-facebook-token": "^3.3.0",
     "passport-token-google": "^0.1.4",
     "pusher": "^3.0.1",
+    "react-awesome-modal": "^2.0.5",
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
