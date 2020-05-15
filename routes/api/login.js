@@ -31,42 +31,45 @@ router.post('/', (req, res) => {
     }
   
     // Check for existing user
-    User.findOne({ "local.email" :email })
+    User.findOne({ email :email })
       .then(user => {
+        console.log("user ",user)
         if(!user){
   
     return res.json("user does not exist")
   
       }
     
-        console.log("PASSWORD",password)
+        // console.log("PASSWORD",password)
         
         bcrypt.compare(password, user.password)
           .then(isMatch => {
             if(!isMatch) return res.status(400).json({ msg: 'Invalid credentials' });
   
-            console.log(user._id)
+            // console.log(user._id)
   
             jwt.sign(
               { id: user._id },
               'jwtSecret',
               { expiresIn:10000 },
               (err, token) => {
-                if(err) throw err;
-                res.status(200).json({
+
+                // console.log("token" , token)
+                if(err) return console.log(err) ;
+                res.json({
                   token,
                   user: {
-                    method: data.method,
+                    method: user.method,
   
-                    id: data._id,
-                    class: data.class,
+                    id: user._id,
+                    class: user.class,
   
-                    name: data.name,
-                    email: data.email,
+                    name: user.name,
+                    email: user.email,
                 
-                    phoneNumber: data.phoneNumber,
-                   state : data.state,
-                    country: data.country,
+                    phoneNumber: user.phoneNumber,
+                   state : user.state,
+                    country: user.country,
                  
                   }
                 });

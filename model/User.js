@@ -38,11 +38,11 @@ const UserSchema = new Schema({
       default: "",
     },
 
-    state: {
-        type: String,
-        lowercase: true,
-        default: "",
-      },
+    // state: {
+    //     type: String,
+    //     lowercase: true,
+    //     default: "",
+    //   },
 
 
     flag: {

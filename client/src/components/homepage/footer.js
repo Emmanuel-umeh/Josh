@@ -25,19 +25,19 @@ class Footer extends React.Component{
         <div className="footer-widget about-widget">
           <h2>Questions</h2>
           <ul>
-            <li><a href>About Us</a></li>
-            <li><a href>Track Orders</a></li>
-            <li><a href>Returns</a></li>
-            <li><a href>Jobs</a></li>
-            <li><a href>Shipping</a></li>
-            <li><a href>Blog</a></li>
+            <li><a href style={{color : "gray"}}>About Us</a></li>
+            <li><a href style={{color : "gray"}}>Track Orders</a></li>
+            <li><a href style={{color : "gray"}}>Returns</a></li>
+            <li><a href style={{color : "gray"}}>Jobs</a></li>
+            <li><a href style={{color : "gray"}}>Shipping</a></li>
+            <li><a href style={{color : "gray"}}>Blog</a></li>
           </ul>
           <ul>
-            <li><a href>Partners</a></li>
-            <li><a href>Bloggers</a></li>
-            <li><a href>Support</a></li>
-            <li><a href>Terms of Use</a></li>
-            <li><a href>Press</a></li>
+            <li><a href style={{color : "gray"}}>Partners</a></li>
+            <li><a href style={{color : "gray"}}> Bloggers</a></li>
+            <li><a href style={{color : "gray"}}>Support</a></li>
+            <li><a href style={{color : "gray"}}>Terms of Use</a></li>
+            <li><a href style={{color : "gray"}}>Press</a></li>
           </ul>
         </div>
       </div>
@@ -85,6 +85,8 @@ class Footer extends React.Component{
           </div>
         </div>
       </div>
+    
+    
     </div>
   </div>
   <div className="social-links-warp">

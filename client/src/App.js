@@ -5,6 +5,9 @@ import logo from './logo.svg';
 import HomePage from './components/Home'
 import Contact from "./components/homepage/contact"
 import About from "./components/homepage/about"
+import {connect} from 'react-redux'
+import {clearErrors} from './actions/errorActions'
+import { loadUser, logout } from "./actions/authActions";
 import {
   Route,
   NavLink,
@@ -12,13 +15,58 @@ import {
   Switch,
   BrowserRouter as Router
 } from "react-router-dom";
+import Login from './components/Authentication/Login';
+
+
+
+
+import store from './store'
+import SignUp from './components/Authentication/SignUp';
 class App extends React.Component {
 
+
+  componentDidMount() {
+
+    // this.setState({
+    //   loader : true
+    // })
+    store.dispatch(loadUser());
+  
+  //   Pusher.logToConsole = true;
+  
+  //   var pusher = new Pusher('fdc10afe6e0eeba7b641', {
+  //     cluster: 'us2'
+  //   });
+  
+  //   var channel = pusher.subscribe('SociaRIot');
+  //   const {user} = this.props.auth
+  //   channel.bind('Job-sent', function(data) {
+  //     // alert(JSON.stringify(data));
+  //     console.log("pusher data ", data)
+  //     console.log("user ", user)
+  //     console.log("influencer id", data.influencerID)
+  // if(user){
+  //   if(data.influencerID=== user.id ){
+  //     // alert("New notification")
+  //     this.setState({
+  //       notification : true
+  //     })
+  //   }
+  // }
+     
+     
+    // });
+  
+    // setTimeout(() => {
+    //   this.setState({ loader: false });
+    //   // console.clear()
+    //   }, 2000);
+  }
   
 
   render(){
     return (
-
+    
       <React.Fragment>
       <div id="preloder">
         <div class="loader"></div>
@@ -35,6 +83,18 @@ class App extends React.Component {
        <Route  path="/contact" >
          
          <Contact />
+           
+     </Route>
+
+     <Route  path="/login" >
+         
+         <Login />
+           
+     </Route>
+
+     <Route  path="/signup" >
+         
+         <SignUp />
            
      </Route>
      <Route  path="/about">
@@ -70,9 +130,10 @@ class App extends React.Component {
 
 }
 
-export default App;
-
-
-
-
-  
+const mapStateToProps = state => ({
+  auth: state.auth,
+  error: state.error
+});
+export default connect(mapStateToProps, {clearErrors, logout})(
+  App
+);

@@ -9,7 +9,7 @@ class Features extends React.Component{
             <React.Fragment>
 
                 {/* Features section */}
-<section className="features-section">
+<section className="features-section" style ={{marginTop : "-50px"}}> 
   <div className="container-fluid">
     <div className="row">
       <div className="col-md-4 p-0 feature">

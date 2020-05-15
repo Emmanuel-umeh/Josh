@@ -30,7 +30,7 @@ class Header extends React.Component{
           <div className="user-panel">
             <div className="up-item">
               <i className="flaticon-profile" />
-              <a href="#">Sign</a> In or <a href="#">Create Account</a>
+              <Link to="/login">Sign</Link> In or <Link to="/signup">Create Account</Link>
             </div>
             <div className="up-item">
               <div className="shopping-card">

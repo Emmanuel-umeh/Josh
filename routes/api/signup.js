@@ -26,10 +26,10 @@ router.post("/user", (req, res) => {
     password,
 
     phoneNumber,
-    country,
-
-    state
+    country
   } = req.body;
+
+  console.log("req.body " , req.body)
 
   // Simple validation
   if (
@@ -39,12 +39,12 @@ router.post("/user", (req, res) => {
     !password ||
     !phoneNumber ||
   
-    !state||
+    // !state||
 
     !country
   ) {
 
-    res.json("please enter all fields")
+   return res.json("please enter all fields")
   }
 
   // Check for existing influencer
@@ -61,8 +61,7 @@ router.post("/user", (req, res) => {
     
         phoneNumber,
        
-        country,
-        state
+        country
    
     });
 
@@ -80,7 +79,7 @@ router.post("/user", (req, res) => {
             { expiresIn: 12600 },
             (err, token) => {
               if (err) throw err;
-              res.json({
+            return  res.json({
                 token,
                 user: {
                   method: data.method,
@@ -92,7 +91,7 @@ router.post("/user", (req, res) => {
                   email: data.email,
               
                   phoneNumber: data.phoneNumber,
-                 state : data.state,
+                //  state : data.state,
                   country: data.country,
                
                 },

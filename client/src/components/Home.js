@@ -22,6 +22,9 @@ class HomePage extends Component{
                 <Features/>
                 <Latest />
                 <Trending />
+               
+
+                
                 <Banner />
                 <Footer />
             </React.Fragment>
